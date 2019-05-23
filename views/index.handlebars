@@ -1,0 +1,70 @@
+{{!-- ========= HEADER ========= --}}
+
+<div class="container" id="header-container">
+  <div class="row" id="header-row">
+    <div class="col-12" id="header-column">
+      <h1>Consume! This! Particular! Burger!</h1>
+    </div>
+  </div>
+  <div class="row" id="picture-row">
+    <img src="/assets/img/burger.png" alt="burger_pic">
+  </div>
+</div>
+
+{{!-- ========= MAIN CONTENT ========= --}}
+
+<div class="container" id="main-content-container">
+  <div class="row" id="main-content-row">
+    <div class="col-12" id="main-content-column">
+
+      {{!-------- BURGER SECTION --------}}
+      <div class="row" id="burgers-row">
+
+        {{!-------- Non-Devoured Burgers --------}}
+        <div class="col-6" id="non-devoured-burgers">
+          <h2>Burgers that have yet to be Devoured:</h2>
+
+          <ul>
+            {{#each burgers}}
+            {{#unless devoured}}
+            {{> burgers/burger-block devoured=true}}
+            {{/unless}}
+            {{/each}}
+          </ul>
+        </div>
+
+        {{!-------- Devoured Section --------}}
+        <div class="col-6" id="devoured-burgers">
+          <h2>Burgers that have been Devoured:</h2>
+
+          <ul id="devoured-burgers">
+            {{#each burgers}}
+            {{#if devoured}}
+            {{> burgers/burger-block devoured=false}}
+            {{/if}}
+            {{/each}}
+          </ul>
+        </div>
+
+      </div>
+
+      {{!-------- FORM SECTION --------}}
+      <div class="row" id="form-row">
+        <div class="col-12" id="form-column">
+          <h2>Add a Burger:</h2>
+          <form class="create-form">
+
+            <div class="form-group">
+              <label for="burger">Burger Name:</label>
+              <input type="text" id="burger-name" name="name">
+            </div>
+
+
+            <button type="submit">Add Burger!</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

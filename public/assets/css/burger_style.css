@@ -1,0 +1,61 @@
+/* -------- UNIVERSALS ---------- */
+
+body {
+    background-color: #f4e120;
+}
+
+* {
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* -------- ROWS ---------- */
+
+.row {
+    justify-content: center;
+}
+
+/* -------- COLUMNS ----------  */
+
+.col-12 {
+    text-align: center;
+}
+
+/* -------- STYLE ELEMENTS ----------  */
+
+ul {
+    list-style-position: inside;
+}
+
+#devoured-burgers {
+    color: grey;
+}
+
+h1 {
+    font-family: 'Modak', cursive;
+    /* Nice */
+    font-size: 69px;
+    /* Nice */
+    text-shadow: -2px 1px 0px white;
+
+}
+
+h2, h3 {
+    font-family: 'Anton', sans-serif;
+    padding: 20px;
+    background-color: #ea2731;
+    color: #f4e120;
+    text-shadow: -2px 1px 0px black;
+    border: 5px solid black;
+    border-radius: 25px;
+    margin-top: 10px
+}
+
+input, button {
+    border-radius: 25px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+}
